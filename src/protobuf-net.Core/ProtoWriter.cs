@@ -666,7 +666,7 @@ namespace ProtoBuf
 
             if (serializer is IMeasuringSerializer<T> measuringSerializer
                 && serializer.Features.HasFlag(SerializerFeatures.OptionTrySkipWritingWhenMeasuring)
-                && (length = measuringSerializer.Measure(writer, writer.WireType, value)) > 0) 
+                && (length = measuringSerializer.Measure(writer, writer.WireType, value)) > 0)  
             {
                 // cache it if we can
                 if (obj is not null)
